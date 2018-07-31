@@ -1,0 +1,28 @@
+$TTL 100
+@       IN      SOA     ns1.domena.pl.      hostmaster.domena.pl. (
+                                                2018072100
+                                                100
+                                                3600
+                                                1209600
+                                                86400 )
+
+domena.pl.      100     IN      NS      ns1.domena.pl.
+domena.pl.      100     IN      NS      ns2.domena.pl.
+
+ftp     100     IN      A       172.0.0.1
+localhost       100     IN      A       127.0.0.1
+mail    100     IN      A       172.0.0.1
+domena.pl.      100     IN      A       172.0.0.1
+ns1.domena.pl.  100     IN      A       172.0.0.1
+ns2.domena.pl.  100     IN      A       172.0.0.1
+pop     100     IN      A       172.0.0.1
+smtp    100     IN      A       172.0.0.1
+www     100     IN      A       172.0.0.1
+
+domena.pl.      100     IN      MX      10 mail
+
+
+
+domena.pl.      100     IN      TXT     "v=spf1 a mx ip4:172.0.0.1 ~all"
+
+localhost       100     IN      AAAA    ::1
